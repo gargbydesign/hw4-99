@@ -2,14 +2,18 @@
 
 <% if @current_user != nil %>
   <h2>My Entries</h2>
-  <% for entry in @entries %>
-    <h3><%= entry["title"] %></h3>
-    <h4><%= entry["occurred_on"] %></h4>
-    <p><%= entry["description"] %></p>
-  <% end %>
+  <div class="row">
+    <% for entry in @entries %>
+      <div class="col-md-4">
+        <h3><%= entry["title"] %></h3>
+        <h4><%= entry["occurred_on"] %></h4>
+        <p><%= entry["description"] %></p>
+      </div>
+    <% end %>
+  </div>
 
   <p>
-    <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
+    <a href="/entries/new?place_id=<%= @place["id"] %>" class="btn btn-primary">New Entry</a>
   </p>
 <% else %>
   <p>You must first <a href="/login">login</a> to see and add entries to places.</p>

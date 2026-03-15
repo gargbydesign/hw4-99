@@ -4,22 +4,22 @@
   <form action="/entries" method="post">
     <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
 
-    <p>
-      <label for="title_input">Title</label>
-      <input type="text" name="title" id="title_input">
-    </p>
+    <div class="mb-3">
+      <label for="title_input" class="form-label">Title</label>
+      <input type="text" name="title" id="title_input" class="form-control">
+    </div>
 
-    <p>
-      <label for="description_input">Description</label>
-      <input type="text" name="description" id="description_input">
-    </p>
+    <div class="mb-3">
+      <label for="description_input" class="form-label">Description</label>
+      <input type="text" name="description" id="description_input" class="form-control">
+    </div>
 
-    <p>
-      <label for="occurred_on_input">Occurred On</label>
-      <input type="date" name="occurred_on" id="occurred_on_input">
-    </p>
+    <div class="mb-3">
+      <label for="occurred_on_input" class="form-label">Occurred On</label>
+      <input type="date" name="occurred_on" id="occurred_on_input" class="form-control">
+    </div>
 
-    <button>Save</button>
+    <button class="btn btn-primary">Save</button>
   </form>
 <% else %>
   You must first <a href="/login">login</a> to post.
