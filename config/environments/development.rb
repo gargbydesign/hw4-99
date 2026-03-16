@@ -56,6 +56,9 @@ Rails.application.configure do
   
   config.hosts = nil
 
+  # Store uploaded files on the local file system
+  config.active_storage.service = :local
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
